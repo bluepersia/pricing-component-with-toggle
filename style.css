@@ -124,6 +124,11 @@ body {
     left:0px;
     border-radius: 32px;
     pointer-events: none;
+    transition: filter 300ms;
+}
+
+.component_switch_checkbox:hover + .component_switch_slider {
+    filter:brightness(120%);
 }
 
 .component_switch_slider::after
@@ -137,12 +142,13 @@ body {
     top: 50%;
     left: 4px;
     transform: translateY(-50%);
+    transition: left 300ms, transform 300ms;
 }
 
 .component_switch_checkbox:checked + .component_switch_slider::after
 {
-    left:auto;
-    right: 4px;
+    left:calc(100% - 4px);
+    transform: translate(-100%, -50%);
 }
 
 .component_header {
@@ -196,6 +202,19 @@ margin-bottom: 1.33em;
 
 .component_plan_cost {
     margin-bottom: .44em;
+    display: flex;
+    align-items: center;
+    gap: 0.09em;
+}
+
+.component_plan_cost span 
+{
+    font-size: 2.66rem;
+}
+
+.component_plan.change-plan .component_plan_cost {
+    animation-name: change-plan;
+    animation-duration: 600ms;
 }
 
 
@@ -234,4 +253,22 @@ margin-bottom: 1.33em;
     .component_plan--large {
         padding: 3.6em 2em;
     }
+}
+
+
+
+@keyframes change-plan {
+
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+    
 }
