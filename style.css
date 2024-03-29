@@ -14,12 +14,28 @@ html
 {
     font-size: 15px;
 }
+body {
+    margin: 0;
+}
 
 .component 
 {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     min-height: 100vh;
+    text-align: center;
+    color:var(--color-2);
+    padding: 4.26em 6.4% 4.73em;
+    background-image: url(./images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top -2em right -12em;
+    background-color: hsl(235, 80%, 98%);
+}
+
+.component, .component * {
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .component h1 {
@@ -48,7 +64,7 @@ html
     letter-spacing: .10em;
     text-transform: uppercase;
     transition:color 300ms, background 300ms, border 300ms;
-    border:none;
+    border:transparent 1px solid;
     padding: 1.07em 5em;
 }
 .component_btn-1  
@@ -78,3 +94,121 @@ html
     color: var(--color-4);
  }
 
+
+
+ .component_annually, .component_monthly {
+    opacity: 50%;
+ }
+
+ .component_switch
+{
+    width: 56px;
+    height: 32px;
+    position: relative;
+}
+.component_switch_checkbox {
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    cursor: pointer;
+}
+
+.component_switch_slider 
+{
+    background:var(--gradient-1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left:0px;
+    border-radius: 32px;
+    pointer-events: none;
+}
+
+.component_switch_slider::after
+{
+    content: '';
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background-color: var(--color-4);
+    border-radius: 50%;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+}
+
+.component_switch_checkbox:checked + .component_switch_slider::after
+{
+    left:auto;
+    right: 4px;
+}
+
+.component_header {
+    margin-bottom: 5.33em;
+}
+
+
+.component_title 
+{
+    margin-bottom: 1.25rem;
+}
+
+
+.component_toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1.6em;
+}
+
+
+.component_main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.13em;
+}
+
+.component_plan {
+    padding: 2em;
+    border-radius: 16px;
+}
+.component_plan--small {
+    background-color: var(--color-4);
+}
+.component_plan--large {
+    background:var(--gradient-1);
+    color: var(--color-4);
+}
+
+.component_plan--small .component_plan_cost 
+{
+    color: var(--color-3);
+}
+
+.component_plan_title {
+margin-bottom: 1.33em;
+}
+
+
+.component_plan_cost {
+    margin-bottom: .44em;
+}
+
+
+.component_plan_list 
+{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2.13em;
+}
+
+.component_plan_list_item 
+{
+    border-bottom: 1px solid hsl(232, 13%, 49%, 25%);
+    padding: .86em;
+}
+.component_plan_list_item:first-child
+ {
+    border-top: 1px solid hsl(232, 13%, 49%, 25%);
+ }
