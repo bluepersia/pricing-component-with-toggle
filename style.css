@@ -28,8 +28,8 @@ body {
     padding: 4.26em 6.4% 4.73em;
     background-image: url(./images/bg-top.svg);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top -2em right -12em;
+    background-size: 50%;
+    background-position: top right -5em;
     background-color: hsl(235, 80%, 98%);
 }
 
@@ -66,6 +66,7 @@ body {
     transition:color 300ms, background 300ms, border 300ms;
     border:transparent 1px solid;
     padding: 1.07em 5em;
+    cursor: pointer;
 }
 .component_btn-1  
 {
@@ -166,12 +167,14 @@ body {
 .component_main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2.13em;
 }
 
 .component_plan {
     padding: 2em;
     border-radius: 16px;
+    max-width: 350px;
 }
 .component_plan--small {
     background-color: var(--color-4);
@@ -212,3 +215,23 @@ margin-bottom: 1.33em;
  {
     border-top: 1px solid hsl(232, 13%, 49%, 25%);
  }
+
+
+ @media (min-width:1440px)
+{
+    .component{
+        background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+        background-size: 25%, 25%;
+        background-position: top right, bottom left;
+    }
+    .component_main
+    {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .component_plan--large {
+        padding: 3.6em 2em;
+    }
+}
