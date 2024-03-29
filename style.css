@@ -1,0 +1,80 @@
+
+:root 
+{
+    --color-1: hsl(232, 67%, 89%);
+    --color-2: hsl(232, 13%, 49%);
+    --color-3: hsl(232, 13%, 33%);
+    --color-4: white;
+    --color-5: hsl(237, 63%, 65%);
+
+    --gradient-1: linear-gradient(135deg, hsl(237, 73%, 79%), hsl(238, 63%, 64%));
+}
+
+html 
+{
+    font-size: 15px;
+}
+
+.component 
+{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    min-height: 100vh;
+}
+
+.component h1 {
+    font-size: 4.8rem;
+    letter-spacing: 0.03em;
+}
+
+.component h2 
+{
+    font-size: 2.13rem;
+    letter-spacing: 0;
+}
+
+.component h3 
+{
+    font-size: 1.2rem;
+    letter-spacing: 0;
+}
+
+
+
+.component_btn 
+{
+    font-size: .86rem;
+    font-family: inherit;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+    transition:color 300ms, background 300ms, border 300ms;
+    border:none;
+    padding: 1.07em 5em;
+}
+.component_btn-1  
+{
+    background:var(--gradient-1);
+    color: var(--color-4);
+}
+
+.component_btn-1:hover
+{
+    color: var(--color-5);
+    background: transparent;
+    border: solid 1px var(--color-5);
+}
+
+.component_btn-2
+ {
+    background: var(--color-4);
+    color: var(--color-5);
+ }
+
+
+ .component_btn-2:hover
+ {
+    background:transparent;
+    border:solid 1px var(--color-4);
+    color: var(--color-4);
+ }
+
